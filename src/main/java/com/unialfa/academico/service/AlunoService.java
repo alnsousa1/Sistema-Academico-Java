@@ -21,4 +21,12 @@ public class AlunoService {
     public List<Aluno> listarTodos(){
         return repository.findAll();
     }
+
+    public Aluno buscarPorId(Long id) {
+        return repository.findById(id).get();
+    }
+
+    public void remover(Long id){
+        repository.deleteById(id);
+    }
 }

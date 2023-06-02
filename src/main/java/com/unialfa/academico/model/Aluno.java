@@ -3,6 +3,7 @@ package com.unialfa.academico.model;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -19,6 +20,7 @@ public class Aluno {
     private Long id;
     private String nome;
     @Column(name = "DT_NASCIMENTO")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataNascimento;
     private String telefone;
     private String bairro;
